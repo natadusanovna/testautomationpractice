@@ -12,6 +12,11 @@ namespace TestAutomationPractice.Steps
         Utilities ut = new Utilities(Driver);
         HomePage hp = new HomePage(Driver);
 
+        /// <summary>
+        /// comment
+        /// </summary>
+        /// <param name="term"></param>
+
         [Given(@"user enters '(.*)' search term")]
         public void GivenUserEntersSearchTerm(string term)
         {
