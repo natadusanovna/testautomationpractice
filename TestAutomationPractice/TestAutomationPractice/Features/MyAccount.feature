@@ -1,10 +1,14 @@
 ﻿Feature: My Account
-	Simple calculator for additing two numbers 
+	In order to open sign in page
+    As a registered user
+    I want to be able to log in
+
 	
 	
 @mytag
-Scenario: Add two numbers
-	Given The first number is 50
-	And The second number is 70
-	When the two numbers are added
-	Then the result should be 120
+Scenario: User can log in
+	Given user opens sign in page
+    And enters correct credentials
+	When user submits the login form
+    Then user will be logged in
+
