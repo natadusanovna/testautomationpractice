@@ -11,6 +11,8 @@ namespace TestAutomationPractice.Pages
         public By quantity = By.Id("quantity_wanted");
         public By productName = By.XPath("//h1[@itemprop='name']");
         public By addToCartBtn = By.Id("add_to_cart");
+        public By proToCheckOutBtn = By.XPath("//*[@title='Proceed to checkout']");
+        //public By proToCheckOutBtn = By.ClassName("button-medium");
         public By cartPage = By.Id("order");
 
         public PDPage(IWebDriver driver)
@@ -20,7 +22,7 @@ namespace TestAutomationPractice.Pages
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(pdPage));
         }
 
-        public bool InformationPageIsDisplayed(string pageName)
+        public bool InformationPageIsDisplayed()
         {
             By cartPage = By.Id("order");
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
