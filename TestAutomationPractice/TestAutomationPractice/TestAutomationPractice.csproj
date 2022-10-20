@@ -62,9 +62,6 @@
     <Compile Update="Features\PDP.feature.cs">
       <DependentUpon>PDP.feature</DependentUpon>
     </Compile>
-    <Compile Update="Pages\PLPage.feature.cs">
-      <DependentUpon>PLPage.feature</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <SpecFlowFeatureFiles Update="Features\Footer.feature">
