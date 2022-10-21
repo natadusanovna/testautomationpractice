@@ -22,12 +22,12 @@ namespace TestAutomationPractice.Pages
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(pdPage));
         }
 
-        public bool InformationPageIsDisplayed()
-        {
-            By cartPage = By.Id("order");
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
-            return wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(cartPage)).Displayed;
+        //public bool InformationPageIsDisplayed()
+        //{
+            //By cartPage = By.Id("order");
+            //var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
+            //return wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(cartPage)).Displayed;
 
-        }
+        //}
     }
 }

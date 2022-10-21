@@ -44,9 +44,10 @@ namespace TestAutomationPractice.Helpers
             var SelectElement = new SelectElement(dropdown);
             SelectElement.SelectByText(option);
         }
-        internal object ElementIsDisplayed(By signOutbtn)
+        internal bool ElementIsDisplayed(By locator)
         {
-            throw new NotImplementedException();
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
+            return wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(locator)).Displayed;
         }
         internal object ReturnTextFromElementText (object searchResult)
         {
@@ -69,7 +70,7 @@ namespace TestAutomationPractice.Helpers
 
         {
         var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
-        return wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(locator)).Displayed;
+        return wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(locator)).Displayed;
         }
         public bool TextPresentInElement(string text)
         {
